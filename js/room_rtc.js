@@ -158,7 +158,6 @@ let handleUserLeft = async (user) => {
             videoFrames[i].style.height = '300px'
             videoFrames[i].style.width = '300px'
         }
-         window.location = 'index.html';
     }
 }
 
@@ -265,6 +264,7 @@ let leaveStream = async (e) => {
     }
 
     channel.sendMessage({text:JSON.stringify({'type':'user_left', 'uid':uid})})
+    window.location = 'index.html';
 }
 
 
