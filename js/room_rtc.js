@@ -158,6 +158,7 @@ let handleUserLeft = async (user) => {
             videoFrames[i].style.height = '300px'
             videoFrames[i].style.width = '300px'
         }
+         window.location = 'index.html';
     }
 }
 
