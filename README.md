@@ -1,2 +1,0 @@
-# kumkumtest.github.io
-testets
