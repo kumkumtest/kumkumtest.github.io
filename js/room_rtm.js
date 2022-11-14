@@ -1,13 +1,13 @@
 //멤버가 들어왔을때 처리 => 멤버 ui 갱신, 전체 인원 수 갱신, 봇 메시지 출력
 let handleMemberJoined = async (MemberId) => {
-    console.log('A new member has joined the room:', MemberId)
+    console.log('새로운 인원이 방에 참여했습니다 :', MemberId)
     addMemberToDom(MemberId)
 
     let members = await channel.getMembers()
     updateMemberTotal(members)
 
     let {name} = await rtmClient.getUserAttributesByKeys(MemberId, ['name'])
-    addBotMessageToDom(`Welcome to the room ${name}! 👋`)
+    addBotMessageToDom(`환영합니다, ${name}! 👋`)
 }
 
 //멤버 이름을 출력
@@ -109,7 +109,7 @@ let addBotMessageToDom = (botMessage) => {
 
     let newMessage = `<div class="message__wrapper">
                         <div class="message__body__bot">
-                            <strong class="message__author__bot">🤖 Mumble Bot</strong>
+                            <strong class="message__author__bot">🤖 소리봇</strong>
                             <p class="message__text__bot">${botMessage}</p>
                         </div>
                     </div>`
