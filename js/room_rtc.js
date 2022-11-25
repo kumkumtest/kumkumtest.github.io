@@ -55,7 +55,7 @@ let joinRoomInit = async () => {
     channel.on('ChannelMessage', handleChannelMessage)
 
     getMembers()
-    addBotMessageToDom(`Welcome to the room ${displayName}! 👋`)
+    addBotMessageToDom(`환영합니다! ${displayName}! 👋`)
 
     //agora client 생성
     client = AgoraRTC.createClient({mode:'rtc', codec:'h264'})
